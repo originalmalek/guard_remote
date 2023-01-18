@@ -9,9 +9,7 @@ from .format_duration import format_duration, get_duration
 
 
 def is_strange_visit(visit_duration):
-    if visit_duration / 60 > 1000:
-        return True
-    return False
+    return visit_duration / 60 > 1000
 
 
 def passcard_info_view(request, passcode):
