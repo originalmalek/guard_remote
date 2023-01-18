@@ -1,5 +1,7 @@
+from django.utils.timezone import localtime
+
 def get_duration(entered_time, leaved_time):
-    total_visit_time = leaved_time - entered_time
+    total_visit_time = localtime(leaved_time) - localtime(entered_time)
     total_visit_time_in_seconds = round(total_visit_time.total_seconds())
     return total_visit_time_in_seconds
 
